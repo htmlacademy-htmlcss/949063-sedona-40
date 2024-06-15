@@ -140,6 +140,10 @@
   line-height: 24px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: "Pt Sans", sans-serif;
   background-color: var(--background-color-default);
@@ -218,11 +222,11 @@ body {
 }
 
 /* Subscribe */
-.subscribe {
+.subscribe-index {
   background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-
+  background-color: var(--text-color-basic);
   color: var(--text-color-default);
 }
 
@@ -355,10 +359,6 @@ input.subscribe-form-email::placeholder {
 .pagination-active {
   color: var(--text-color-basic);
   background-color: var(--form-color-element-2);
-}
-
-.subscribe-catalog {
-  background-image: none;
 }
 
 .subscribe-title-catalog {
