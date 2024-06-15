@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "Pt Sans";
+  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pt Sans";
+  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+  /* Variables */
+
+:root {
+  /* Text colors*/
+  --text-color-basic: #000000;
+  --text-color-second: #333333;
+  --text-color-default: #ffffff;
+  /* Не понятно нужен ли он */
+  --text-color-small: rgba(255, 255, 255, 0.3);
+  --text-color-error: #ff5757;
+
+  /* Button colors */
+  --button-color-basic: #756157;
+  --button-color-second: #82b3d3;
+  --button-color-select: #7db54f;
+
+  /* Background colors */
+  --background-color-default: #ffffff;
+  --background-color-second: #82b3d3;
+  --background-color-second-1: rgba(131, 179, 211, 0.12);
+  --background-color-second-2: rgba(131, 179, 211, 0.2);
+
+  /* Icon colors */
+  --icon-color-basic: #000000;
+  --icon-color-second: #83b3d3;
+  --icon-color-select: #7db54f;
+
+  /* Form colors */
+  --form-color-input: #3f5e72;
+  --form-color-element-1: #e5e5e5;
+  /* Не понятно нужен ли он */
+  --form-color-element-2: #f2f2f2;
+}
+
+/* Typography */
+
+/* Typography heading */
+.heading-1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.heading-2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.heading-3-lower-case {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.heading-4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+/* Typography buttons */
+.button-big {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small-regular {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small-lower-case {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+}
+
+.button-font {
+  font-family: "Pt Sans", sans-serif;
+}
+
+/* Typography text */
+.text-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.text-basic {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.text-input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+body {
+  font-family: "Pt Sans", sans-serif;
+  background-color: var(--background-color-default);
+  color: var(--text-color-second);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Index page */
+
+/* Header */
+.main-navigation-list {
+ list-style-type: none;
+}
+
+.main-navigation-link {
+  color: var(--text-color-basic);
+  text-decoration: none;
+}
+
+.heart-info {
+  background-color: var(--icon-color-select);
+  color: var(--text-color-default);
+
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.main-navigation-button {
+  background-color: var(--button-color-basic);
+}
+
+/* Main */
+
+/* Hero */
+
+/* Advantages */
+
+.advantages-header-text {
+  color: var(--text-color-basic);
+}
+
+.advantages-list {
+  list-style-type: none;
+}
+
+.advantages-item-color-second {
+  background-color: var(--background-color-second);
+  color: var(--text-color-default);
+}
+
+.advantages-item-color-second-1 {
+  background-color: var(--background-color-second-1);
+}
+
+.advantages-item-color-second-1 .advantages-item-title {
+  color: var(--text-color-basic);
+}
+
+.advantages-item-color-second-2 {
+  background-color: var(--background-color-second-2);
+}
+
+.advantages-item-color-second-2 .advantages-item-title {
+  color: var(--text-color-basic);
+}
+
+/* Service */
+.service-list {
+  list-style-type: none;
+}
+
+.hotel-search-button {
+  background-color: var(--button-color-basic);
+  color: var(--text-color-default);
+}
+
+/* Subscribe */
+.subscribe {
+  background-image: url(../images/subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  color: var(--text-color-default);
+}
+
+.subscribe-form-email {
+  background-color: var(--form-color-element-2);
+}
+
+input.subscribe-form-email::placeholder {
+  color: var(--text-color-basic);
+  opacity: 0.6;
+}
+
+.subscribe-form-button {
+  background-color: var(--button-color-second);
+  color: var(--text-color-default);
+}
+
+/* Footer */
+.footer-social-list {
+  list-style-type: none;
+}
+
+.footer-social-link {
+  color: var(--icon-color-second);
+}
+
+.footer-phone-link {
+  text-decoration: none;
+  color: var(--text-color-basic);
+}
+
+.footer-logo {
+  color: var(--text-color-basic);
+}
+
+/* Catalog-page */
+/* Filter-catalog */
+.filter-catalog {
+  background-image: url(../images/filter.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  background-color: var(--text-color-basic);
+  color: var(--text-color-default);
+}
+
+.breadcrumbs {
+  list-style-type: none;
+
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs-link {
+  color: var(--text-color-default);
+
+  text-decoration: none;
+}
+
+/* Не знаю как лучше записать для обоих списков этот line-height. Стоит ли создавать отдельный класс? */
+.infrastructure-list {
+  line-height: 23px;
+
+  list-style-type: none;
+}
+
+.housing-type-list {
+  line-height: 23px;
+
+  list-style-type: none;
+}
+
+.button-submit {
+  background-color: var(--button-color-second);
+  color: var(--text-color-default);
+}
+
+.button-reset {
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--text-color-default);
+}
+
+/* Catalog */
+.header-catalog-text {
+  color: var(--text-color-basic);
+}
+
+.select-catalog {
+  color: var(--text-color-second);
+}
+
+.catalog-view {
+  list-style-type: none;
+}
+
+.catalog-cards {
+  list-style-type: none;
+}
+
+.catalog-card-link {
+  text-decoration: none;
+  color: var(--text-color-basic);
+}
+
+.catalog-card-link-details {
+  text-decoration: none;
+  color: var(--text-color-default);
+  background-color: var(--button-color-basic);
+}
+
+.catalog-card-button-favorites {
+  background-color: var(--button-color-second);
+  color: var(--text-color-default);
+}
+
+.catalog-pagination-list {
+  list-style-type: none;
+}
+
+.catalog-pagintaion-link {
+  text-decoration: none;
+  color: var(--text-color-default);
+  background-color: var(--button-color-second);
+}
+
+.catalog-pagintaion-more {
+  color: var(--text-color-basic);
+}
+
+.pagination-active {
+  color: var(--text-color-basic);
+  background-color: var(--form-color-element-2);
+}
+
+.subscribe-catalog {
+  background-image: none;
+}
+
+.subscribe-title-catalog {
+  color: var(--text-color-basic);
+}
+
+.subscribe-description-catalog {
+  color: var(--text-color-second);
+}
