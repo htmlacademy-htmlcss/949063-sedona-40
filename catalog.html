@@ -90,18 +90,18 @@
           </fieldset>
           <fieldset class="range-price">
             <legend class="legend-title heading-4">Стоимость, ₽:</legend>
-            <input class="range-price-from" type="number" min="0" step="1" placeholder="от">
-            <span class="price-from text-input">от</span> <!-- Возможно реализовать через псевдоэлемент или лучше placeholder?-->
-            <input class="range-price-before" type="number" max="9000" step="1" placeholder="до">
-            <span class="price-before text-input">до</span> <!-- Возможно реализовать через псевдоэлемент или лучше placeholder?-->
+            <input class="range-price-from range-price-placeholder pt-sans-font" type="number" min="0" step="1" placeholder="0">
+            <span class="price-from price-from-to text-input">от</span> <!-- Возможно реализовать через псевдоэлемент или лучше placeholder?-->
+            <input class="range-price-before range-price-placeholder pt-sans-font" type="number" max="9000" step="1" placeholder="9000">
+            <span class="price-before price-from-to text-input">до</span> <!-- Возможно реализовать через псевдоэлемент или лучше placeholder?-->
             <div class="container-range-input">
               <input class="range-price-from" type="range" min="0" max="9000" step="1">
               <span class="left-range"></span>
               <span class="right-range"></span>
             </div>
           </fieldset>
-          <button class="button-submit button-font button-small" type="submit">Применить</button>
-          <button class="button-reset button-font button-small" type="reset">Сбросить</button>
+          <button class="button-submit pt-sans-font button-small" type="submit">Применить</button>
+          <button class="button-reset pt-sans-font button-small" type="reset">Сбросить</button>
         </form>
       </section>
       <section class="catalog" data-test="catalog">
@@ -235,7 +235,7 @@
         <span class="subscribe-description subscribe-description-catalog text-basic">Только полезная информация и никакого спама, честное бойскаутское!</span>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscribe-form-email text-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
-          <button class="subscribe-form-button button-big button-font" type="submit">Подписаться</button>
+          <button class="subscribe-form-button button-big pt-sans-font" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
