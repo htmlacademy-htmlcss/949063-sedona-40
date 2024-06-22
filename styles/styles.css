@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pt Sans";
-  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Pt Sans";
-  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -136,7 +136,7 @@
   line-height: 24px;
 }
 
-.pt-sans-font {
+.font-inherit {
   font-family: "Pt Sans", sans-serif;
 }
 
@@ -144,7 +144,33 @@
   text-align: center;
 }
 
+.base-list {
+  list-style-type: none;
+}
+
+.base-indent {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Pt Sans", sans-serif;
   background-color: var(--background-color-default);
   color: var(--text-color-second);
@@ -155,13 +181,38 @@ body {
 /* Index page */
 
 /* Header */
+.main-navigation-logo-link {
+  margin-right: 20px;
+}
+
 .main-navigation-list {
- list-style-type: none;
+  align-items: center;
+  width: 450px;
 }
 
 .main-navigation-link {
   color: var(--text-color-basic);
   text-decoration: none;
+  padding: 20px 16px;
+}
+
+.main-navigation-list-user {
+  justify-content: flex-end;
+  width: 300px;
+  margin-left: auto;
+}
+
+.main-navigation-link-user-search {
+  padding: 22px 12px;
+}
+
+.main-navigation-link-user-favorites {
+  padding: 24px 13px 23px;
+}
+
+.main-navigation-button {
+  margin-left: 20px;
+  padding: 8px 34px;
 }
 
 .heart-info {
@@ -178,17 +229,55 @@ body {
 }
 
 /* Main */
-
+.main-container {
+  flex-grow: 1;
+}
 /* Hero */
-
+.hero {
+  width: 1200px;
+  margin: 0 auto;
+}
+.hero-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 /* Advantages */
-
+.advantages {
+  width: 1200px;
+  margin: 0 auto;
+}
 .advantages-header-text {
   color: var(--text-color-basic);
+  width: 620px;
+  margin: 0 auto;
 }
 
 .advantages-list {
-  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.advantages-item:last-child {
+ flex-direction: row-reverse;
+}
+
+.advantages-item-block-small {
+  width: 230px;
+  height: 160px;
+  padding: 113px 85px;
+  text-align: center;
+}
+
+/* Если к блоку добавится картинка, то текстовое содержание обернуть в div с этим классом */
+.advantages-item-block-big {
+  width: 230px;
+  height: 181px;
+  padding: 102px 85px;
+  text-align: center;
+}
+
+.advantages-item-title {
+  margin-bottom: 62px;
 }
 
 .advantages-item-color-second {
@@ -213,12 +302,44 @@ body {
 }
 
 /* Service */
-.service-list {
-  list-style-type: none;
+.service {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.service-item-color-second-1 {
+.service-header-text {
+  width: 505px;
+  margin: 0 auto;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 230px;
+  height: 121px;
+  padding: 183px 85px 81px;
+  position: relative;
+}
+
+.service-item:nth-child(odd) {
   background-color: var(--background-color-second-1);
+}
+
+.service-item-home::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+  position: absolute;
+  background-image: url(../images/icon/home.svg);
+  top: 81px;
+  left: 164px;
+}
+
+.service-item-title {
+  margin-bottom: 30px;
 }
 
 .hotel-search-button {
@@ -226,13 +347,26 @@ body {
   color: var(--text-color-default);
 }
 
+/* Hotel-search */
+.hotel-search-description {
+  width: 592px;
+  margin: 0 auto;
+}
+
 /* Subscribe */
 .subscribe-index {
   background-image: url(../images/subscribe.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--text-color-basic);
+  background-position: center center;
+  background-color: var(--form-color-input);
   color: var(--text-color-default);
+}
+
+.subscribe-description {
+  width: 475px;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .subscribe-form-email {
@@ -250,8 +384,12 @@ input.subscribe-form-email::placeholder {
 }
 
 /* Footer */
+.footer-container {
+  justify-content: space-between;
+}
+
 .footer-social-list {
-  list-style-type: none;
+  align-items: center;
 }
 
 .footer-social-link {
@@ -271,16 +409,15 @@ input.subscribe-form-email::placeholder {
 /* Filter-catalog */
 .filter-catalog {
   background-image: url(../images/filter.jpg);
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
 
-  background-color: var(--text-color-basic);
+  background-color: var(--form-color-input);
   color: var(--text-color-default);
 }
 
 .breadcrumbs {
-  list-style-type: none;
-
   font-size: 16px;
   line-height: 21px;
 }
@@ -294,14 +431,10 @@ input.subscribe-form-email::placeholder {
 /* Не знаю как лучше записать для обоих списков этот line-height. Стоит ли создавать отдельный класс? */
 .infrastructure-list {
   line-height: 23px;
-
-  list-style-type: none;
 }
 
 .housing-type-list {
   line-height: 23px;
-
-  list-style-type: none;
 }
 
 .range-price-placeholder::placeholder {
@@ -324,20 +457,38 @@ input.subscribe-form-email::placeholder {
 }
 
 /* Catalog */
+.header-catalog {
+  align-items: center;
+}
+
 .header-catalog-text {
   color: var(--text-color-basic);
 }
 
 .select-catalog {
   color: var(--text-color-second);
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: auto;
 }
 
 .catalog-view {
-  list-style-type: none;
+  column-gap: 8px;
+  margin-left: 70px;
 }
 
 .catalog-cards {
-  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.catalog-card {
+  width: 300px;
+  height: 398px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 19px;
 }
 
 .catalog-card-link {
@@ -345,29 +496,70 @@ input.subscribe-form-email::placeholder {
   color: var(--text-color-basic);
 }
 
+.catalog-card-image {
+  margin-bottom: 16px;
+  display: block;
+}
+
+.catalog-card-title {
+  margin-bottom: 16px;
+}
+
+.catalog-card-info {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.catalog-card-buttons {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
 .catalog-card-link-details {
   text-decoration: none;
   color: var(--text-color-default);
   background-color: var(--button-color-basic);
+  padding: 8px 26px;
+  border-radius: 4px;
 }
 
 .catalog-card-button-favorites {
   background-color: var(--button-color-second);
   color: var(--text-color-default);
+  padding: 8px 20px;
+  border-radius: 4px;
 }
 
-.catalog-pagination-list {
-  list-style-type: none;
+.catalog-card-rating-stars {
+  justify-content: space-between;
+  align-items: center;
 }
 
-.catalog-pagintaion-link {
+.catalog-card-rating {
+  background-color: var(--form-color-element-2);
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
+}
+
+.catalog-pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.catalog-pagination-link {
   text-decoration: none;
   color: var(--text-color-default);
   background-color: var(--button-color-second);
+  border-radius: 4px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
-.catalog-pagintaion-more {
+.catalog-pagination-more {
   color: var(--text-color-basic);
+  background-color: var(--background-color-default);
 }
 
 .pagination-active {
