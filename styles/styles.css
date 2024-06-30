@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+img {
+
+}
+
   /* Variables */
 
 :root {
@@ -201,20 +205,45 @@ body {
 /* Header */
 .main-navigation-logo-link {
   margin-right: 20px;
+  margin-bottom: -6px;
+  z-index: 1;
+}
+
+.main-navigation-logo-image {
+  display: block;
 }
 
 .main-navigation-list {
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-navigation-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .main-navigation-link {
   color: var(--text-color-basic);
   text-decoration: none;
-  padding: 20px 16px;
+  padding: 20px 0;
+}
+
+.nav-link-active {
+  text-decoration-color: #756257;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 20px;
+  text-underline-position: under;
+  position: relative;
 }
 
 .main-navigation-list-user {
   margin-left: auto;
+}
+
+.main-navigation-list-user .main-navigation-item:not(:last-child) {
+  margin-right: 13px;
 }
 
 .main-navigation-list-user .main-navigation-link {
@@ -338,7 +367,7 @@ body {
   flex-direction: column;
   width: 400px;
   min-height: 385px;
-  padding: 183px 85px 0;
+  padding: 183px 85px 85px;
   position: relative;
 }
 
@@ -617,7 +646,7 @@ input.subscribe-form-email::placeholder {
   min-height: 438px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  padding: 19px;
+  padding: 20px;
 }
 
 .catalog-card-link {
