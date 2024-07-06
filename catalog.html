@@ -18,14 +18,14 @@
           <li class="main-navigation-item">
             <a class="main-navigation-link heading-4" href="#">О Седоне</a>
           </li>
-          <li class="main-navigation-item nav-link-active">
-            <a class="main-navigation-link heading-4" href="#">Гостиницы</a>
+          <li class="main-navigation-item">
+            <a class="main-navigation-link main-navigation-link-active heading-4" href="#">Гостиницы</a>
           </li>
         </ul>
         <ul class="main-navigation-list main-navigation-list-user base-list base-indent flex">
           <li class="main-navigation-item">
             <a class="main-navigation-link main-navigation-link-user-search flex" href="#">
-              <img class="main-navigation-image-search" src="images/icon/search.svg" width="19" height="19" alt="Поиск по странице">
+              <img class="main-navigation-image-search" src="images/icon/search.svg" width="18" height="18" alt="Поиск по странице">
             </a>
           </li>
           <li class="main-navigation-item">
@@ -34,8 +34,8 @@
               <span class="heart-info">12</span>
             </a>
           </li>
-          <li class="main-navigation-item">
-            <a class="main-navigation-button button-small" href="#">Хочу сюда!</a>
+          <li class="main-navigation-item main-navigation-item-user-button">
+            <a class="main-navigation-button button-small button-swap-brown" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -45,13 +45,13 @@
         <div class="filter-container container">
           <header class="header-filter-catalog">
             <h1 class="filter-catalog-title heading-1 base-indent">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs base-list base-indent">
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
+            <ul class="breadcrumbs base-list base-indent flex">
+              <li class="breadcrumbs-item flex">
+                <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                   <span class="visually-hidden">Главная</span>
                 </a>
               </li>
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-item flex">
                 <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
@@ -104,7 +104,7 @@
               </div>
             </fieldset>
             <div class="infrastructure-form-button-container flex">
-              <button class="button-submit font-inherit button-small" type="submit">Применить</button>
+              <button class="button-submit font-inherit button-small button-swap-blue" type="submit">Применить</button>
               <button class="button-reset font-inherit button-small" type="reset">Сбросить</button>
             </div>
           </form>
@@ -122,9 +122,9 @@
             <option value="expensive">Сначала дорогое</option>
             <option value="popular">Сначала популярное</option>
           </select>
-          <ul class="catalog-view base-list flex base-list">
-            <li class="catalog-view-item view-active-item">
-              <a class="catalog-view-link view-active-link" href="catalog.html?view=tile">
+          <ul class="catalog-view base-indent flex base-list">
+            <li class="catalog-view-item">
+              <a class="catalog-view-link catalog-view-active-link" href="catalog.html?view=tile">
                 <img class="catalog-view-image" src="images/icon/view-tile.svg" width="16" height="14" alt="Вид сортировки: плитка">  <!-- Как корректно обозвать? -->
               </a>
             </li>
@@ -151,15 +151,15 @@
               <span class="catalog-card-price">От 4000 ₽</span>
             </div>
             <div class="catalog-card-buttons flex">
-              <a class="catalog-card-link-details button-small" href="#">подробнее</a>
-              <button class="catalog-card-button-favorites button-small font-inherit" type="button">в избранное</button>
+              <a class="catalog-card-link-details button-small button-swap-brown" href="#">подробнее</a>
+              <button class="catalog-card-button-favorites button-small font-inherit button-swap-blue" type="button">в избранное</button>
             </div>
             <div class="catalog-card-rating-stars flex">
-              <div class="catalog-card-stars">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="четыре звезды">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
+              <div class="catalog-card-stars-container">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="четыре звезды">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
               </div>
               <span class="catalog-card-rating button-small-regular">Рейтинг: 8,5</span>
             </div>
@@ -174,15 +174,15 @@
               <span class="catalog-card-price">От 5000 ₽</span>
             </div>
             <div class="catalog-card-buttons flex">
-              <a class="catalog-card-link-details button-small button-is-current" href="#">подробнее</a>
-              <button class="catalog-card-button-favorites button-small font-inherit" type="button">в избранное</button>
+              <a class="catalog-card-link-details button-small button-swap-brown" href="#">подробнее</a>
+              <button class="catalog-card-button-favorites button-small font-inherit catalog-card-button-active" type="button">в избранное</button>
             </div>
             <div class="catalog-card-rating-stars flex">
-              <div class="catalog-card-stars">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="четыре звезды">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
+              <div class="catalog-card-stars-container">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="четыре звезды">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
               </div>
               <span class="catalog-card-rating button-small-regular">Рейтинг: 9,2</span>
             </div>
@@ -197,14 +197,14 @@
               <span class="catalog-card-price">От 2500 ₽</span>
             </div>
             <div class="catalog-card-buttons flex">
-              <a class="catalog-card-link-details button-small" href="#">подробнее</a>
-              <button class="catalog-card-button-favorites button-small font-inherit" type="button">в избранное</button>
+              <a class="catalog-card-link-details button-small button-swap-brown" href="#">подробнее</a>
+              <button class="catalog-card-button-favorites button-small font-inherit button-swap-blue" type="button">в избранное</button>
             </div>
             <div class="catalog-card-rating-stars flex">
-              <div class="catalog-card-stars">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="четыре звезды">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
+              <div class="catalog-card-stars-container">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="четыре звезды">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
               </div>
               <span class="catalog-card-rating button-small-regular">Рейтинг: 6,9</span>
             </div>
@@ -219,13 +219,13 @@
               <span class="catalog-card-price">От 1500 ₽</span>
             </div>
             <div class="catalog-card-buttons flex">
-              <a class="catalog-card-link-details button-small" href="#">подробнее</a>
-              <button class="catalog-card-button-favorites button-small font-inherit" type="button">в избранное</button>
+              <a class="catalog-card-link-details button-small button-swap-brown" href="#">подробнее</a>
+              <button class="catalog-card-button-favorites button-small font-inherit button-swap-blue" type="button">в избранное</button>
             </div>
             <div class="catalog-card-rating-stars flex">
-              <div class="catalog-card-stars">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="четыре звезды">
-                <img class="catalog-card-star" src="images/icon/star.svg" alt="">
+              <div class="catalog-card-stars-container">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="четыре звезды">
+                <img class="catalog-card-star-img" src="images/icon/star.svg" alt="">
               </div>
               <span class="catalog-card-rating button-small-regular">Рейтинг: 5,0</span>
             </div>
@@ -233,7 +233,7 @@
         </ul>
         <ul class="catalog-pagination-list base-list base-indent container flex">
           <li class="catalog-pagination-item">
-            <a class="catalog-pagination-link pagination-active button-big flex" href="#">1</a>
+            <a class="catalog-pagination-link catalog-pagination-link-active button-big flex" href="#">1</a>
           </li>
           <li class="catalog-pagination-item">
             <a class="catalog-pagination-link button-big flex" href="#">2</a>
@@ -253,11 +253,13 @@
         </ul>
       </section>
       <section class="subscribe subscribe-catalog text-center" data-test="subscribe">
-        <h2 class="subscribe-title subscribe-title-catalog heading-2">Подпишитесь на рассылку</h2>
-        <span class="subscribe-description subscribe-description-catalog text-basic">Только полезная информация и никакого спама, честное бойскаутское!</span>
+        <div class="subscribe-container-content">
+          <h2 class="subscribe-title subscribe-title-catalog heading-2">Подпишитесь на рассылку</h2>
+          <span class="subscribe-description subscribe-description-catalog text-basic">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</span>
+        </div>
         <form class="subscribe-form flex" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscribe-form-email text-input font-inherit" type="email" name="email" id="email" placeholder="Ваш e-mail">
-          <button class="subscribe-form-button button-big font-inherit" type="submit">Подписаться</button>
+          <button class="subscribe-form-button button-big font-inherit button-swap-blue" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
