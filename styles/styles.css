@@ -216,8 +216,9 @@ body {
   margin-bottom: -6px;
 }
 
-.main-navigation-logo-image {
-  display: block;
+.main-navigation-logo-image:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-out;
 }
 
 .main-navigation-list {
@@ -225,24 +226,45 @@ body {
   flex-wrap: wrap;
 }
 
+.main-navigation-item {
+  position: relative;
+  margin-right: 16px;
+}
+
+.main-navigation-item:last-child {
+  margin-right: 0;
+}
+
 .main-navigation-link {
   color: var(--text-color-basic);
   text-decoration: none;
-  padding: 19px 16px;
+  padding: 20px 0;
+  display: block;
 }
 
-.main-navigation-link-active {
-  text-decoration-color: #756257;
+.main-navigation-link-active::after {
+  /* text-decoration-color: #756257;
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-thickness: 2px;
   text-underline-offset: 19px;
   text-underline-position: under;
-  position: relative;
+  position: relative; */
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: #756257;
 }
 
 .main-navigation-list-user {
   margin-left: auto;
+}
+
+.main-navigation-list-user .main-navigation-item {
+  margin-right: 0;
 }
 
 .main-navigation-link-user-search {
@@ -256,14 +278,15 @@ body {
 
 .heart-info {
   position: absolute;
-  right: 4px;
+  left: 20px;
   top: 11px;
+  min-width: 20px;
   background-color: var(--icon-color-select);
   color: var(--text-color-default);
   font-size: 10px;
   line-height: 10px;
   padding: 5px 5px 5px 4px;
-  border-radius: 50%;
+  border-radius: 100vh;
 }
 
 .main-navigation-item-user-button {
@@ -295,7 +318,7 @@ body {
   display: block;
   position: absolute;
   bottom: 0;
-  background-image: url(/images/hero-bottom.svg);
+  background-image: url(../images/hero-bottom.svg);
   width: 100%;
   height: 57px;
 }
@@ -419,13 +442,13 @@ body {
 }
 
 .service-item-eat::before {
-  background-image: url(/images/icon/eat.svg);
+  background-image: url(../images/icon/eat.svg);
   width: 74px;
   height: 70px;
 }
 
 .service-item-present::before {
-  background-image: url(/images/icon/present.svg);
+  background-image: url(../images/icon/present.svg);
   width: 64px;
   height: 76px;
 }
@@ -454,6 +477,7 @@ body {
   color: var(--text-color-default);
   padding: 8px 50px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Subscribe */
@@ -495,6 +519,7 @@ body {
   padding: 14px 20px;
   border-radius: 4px 0 0 4px;
   border: none;
+  cursor: pointer;
 }
 
 input.subscribe-form-email::placeholder {
@@ -507,6 +532,7 @@ input.subscribe-form-email::placeholder {
   color: var(--text-color-default);
   padding: 8px 50px;
   border-radius: 0 4px 4px 0;
+  cursor:pointer
 }
 
 /* Footer */
@@ -596,7 +622,7 @@ input.subscribe-form-email::placeholder {
 .breadcrumbs-item:not(:first-child)::before {
   content: "";
   display: inline-block;
-  background-image: url(/images/icon/arrow-breadcrumbs.svg);
+  background-image: url(../images/icon/arrow-breadcrumbs.svg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 10px;
@@ -618,7 +644,7 @@ input.subscribe-form-email::placeholder {
 }
 
 .breadcrumbs-link-home {
-  background-image: url(/images/icon/home-breadcrumbs.svg);
+  background-image: url(../images/icon/home-breadcrumbs.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 12px;
@@ -750,6 +776,7 @@ input.subscribe-form-email::placeholder {
   border: 4px solid rgba(255, 255, 255, 0);
   background-color: rgba(255, 255, 255, 0);
   color: var(--text-color-default);
+  cursor: pointer;
 }
 
 .button-reset:hover {
@@ -793,6 +820,7 @@ input.subscribe-form-email::placeholder {
 .control {
   position: relative;
   align-items: center;
+  cursor: pointer;
 }
 
 .control:hover {
@@ -821,7 +849,7 @@ input.subscribe-form-email::placeholder {
   transform: translate(-50%, -50%);
   width: 12px;
   height: 10px;
-  background-image: url(/images/icon/infrastructure-checked.svg);
+  background-image: url(../images/icon/infrastructure-checked.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -897,9 +925,10 @@ input.subscribe-form-email::placeholder {
   border-radius: 4px;
   margin-left: auto;
   appearance: none;
-  background-image: url(/images/icon/select-arrow.svg);
+  background-image: url(../images/icon/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
+  cursor: pointer;
 }
 
 .select-catalog:hover,
@@ -1006,6 +1035,7 @@ input.subscribe-form-email::placeholder {
   color: var(--text-color-default);
   padding: 8px 20px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .catalog-card-button-active {
@@ -1051,8 +1081,9 @@ input.subscribe-form-email::placeholder {
   text-decoration: none;
   color: var(--text-color-default);
   background-color: var(--button-color-second);
+  padding: 0 10px;
   border-radius: 4px;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   justify-content: center;
   align-items: center;
@@ -1094,10 +1125,14 @@ input.subscribe-form-email::placeholder {
 }
 
 /* Button status */
+.button-swap-brown,
+.button-swap-blue {
+  cursor: pointer;
+}
 .button-swap-brown:hover,
 .button-swap-brown:focus {
   background-color: rgba(97, 80, 72, 1);
-  transition: 0.3s
+  transition: 0.3s;
 }
 
 .button-swap-brown:active {
@@ -1211,9 +1246,10 @@ input.subscribe-form-email::placeholder {
   border-radius: 4px;
   font-weight: 700;
   color: var(--text-color-basic);
-  background-image: url(/images/icon/input-date-calendar.svg);
+  background-image: url(../images/icon/input-date-calendar.svg);
   background-repeat: no-repeat;
   background-position: right 22px center;
+  cursor: pointer;
 }
 
 .input-date::placeholder {
@@ -1266,12 +1302,13 @@ input.subscribe-form-email::placeholder {
   display: block;
   width: 26px;
   height: 26px;
-  background-image: url(/images/icon/tooltip-info.svg);
+  background-image: url(../images/icon/tooltip-info.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--icon-color-second);
   padding: 3px;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .add-place-children:hover + .popover{
@@ -1300,7 +1337,7 @@ input.subscribe-form-email::placeholder {
   transform: translateX(-50%);
   width: 19px;
   height: 9px;
-  background-image: url(/images/icon/tooltip-triangle.svg);
+  background-image: url(../images/icon/tooltip-triangle.svg);
   background-repeat: no-repeat;
 }
 
@@ -1382,6 +1419,7 @@ input.subscribe-form-email::placeholder {
   color: var(--text-color-default);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
