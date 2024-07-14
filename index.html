@@ -13,23 +13,23 @@
         </a>
         <ul class="main-navigation-list base-list base-indent flex">
           <li class="main-navigation-item">
-            <a class="main-navigation-link main-navigation-link-active heading-4" href="#">Главная</a>
+            <a class="main-navigation-link main-navigation-link-active button-swap-blue heading-4" href="#">Главная</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link heading-4" href="#">О Седоне</a>
+            <a class="main-navigation-link heading-4 button-swap-blue" href="#">О Седоне</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link heading-4" href="catalog.html">Гостиницы</a>
+            <a class="main-navigation-link heading-4 button-swap-blue" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="main-navigation-list main-navigation-list-user base-list base-indent flex">
           <li class="main-navigation-item">
-            <a class="main-navigation-link main-navigation-link-user-search flex" href="#">
+            <a class="main-navigation-link main-navigation-link-user-search button-swap-blue flex " href="#">
               <img class="main-navigation-image-search" src="images/icon/search.svg" width="18" height="18" alt="Поиск по странице">
             </a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link main-navigation-link-user-favorites flex" href="#">
+            <a class="main-navigation-link main-navigation-link-user-favorites button-swap-blue flex" href="#">
               <img class="main-navigation-image-favorites" src="images/icon/heart.svg" width="18" height="17" alt="Войти в избранное">
               <span class="heart-info">12</span>
             </a>
@@ -160,5 +160,63 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container modal-closed">
+      <div class="modal">
+          <button class="close-button flex" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        <section class="modal-content">
+          <h2 class="modal-content-title heading-2 base-indent">Поиск гостиницы в Седоне</h2>
+          <form class="modal-content-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="modal-content-check-in-date modal-content-date flex">
+              <span class="modal-content-date-title heading-4">Дата заезда:</span>
+              <input class="input-check-in-date input-date font-inherit text-input" type="text" name="check-in-date" placeholder="27 апреля 2020">
+            </label>
+            <span class="check-in-date-error">Мы не можем отправить вас в прошлое.</span>
+            <label class="modal-content-check-out-date modal-content-date flex">
+              <span class="modal-content-date-title heading-4">Дата выезда:</span>
+              <input class="input-check-out-date input-date font-inherit text-input" type="text" name="check-out-date" placeholder="1 сентября 2023">
+            </label>
+            <span class="check-out-error">На эти даты есть свободные номера. Пока есть.</span>
+            <div class="content-modal-add-place-container flex">
+
+              <div class="content-modal-add-place-people-container flex">
+                <label class="add-place-adults heading-4"
+                for="place-adults">Взрослые:</label>
+                <div class="place-add-container flex">
+                  <button class="delete-place-adults-button button-place" type="button">
+                    <span class="button-line"></span>
+                  </button>
+                  <input class="add-place-adults-input add-place-input text-center" type="number" min="1" step="1" id="place-adults" placeholder="2">
+                  <button class="add-place-adults-button button-place" type="button">
+                    <span class="button-line"></span>
+                    <span class="button-line"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="content-modal-add-place-people-container flex">
+                <label class="add-place-children heading-4" for="place-children">Дети:</label>
+                <div class="popover">
+                  <p class="popover-content">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                </div>
+                <div class="place-add-container flex">
+                  <button class="delete-place-children-button button-place" type="button">
+                    <span class="button-line"></span>
+                  </button>
+                  <input class="add-place-children-input add-place-input text-center" type="number" min="1" step="1" id="place-children" placeholder="2">
+                  <button class="add-place-children-button button-place" type="button">
+                    <span class="button-line"></span>
+                    <span class="button-line"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="modal-content-button font-inherit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
