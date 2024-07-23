@@ -164,7 +164,7 @@
       <div class="modal-container modal-closed">
         <div class="modal">
             <button class="close-button flex" type="button" tabindex="0">
-              <span class="visually-hidden">Закрыть</span>
+              <span class="visually-hidden">Закрыть.</span>
             </button>
           <section class="modal-content">
             <h2 class="modal-content-title heading-2 base-indent">Поиск гостиницы в Седоне</h2>
@@ -176,7 +176,7 @@
               <span class="check-error check-in-date-error">Мы не можем отправить вас в прошлое.</span>
               <label class="modal-content-check-out-date modal-content-date flex">
                 <span class="modal-content-date-title heading-4">Дата выезда:</span>
-                <input class="input-check-out-date input-date font-inherit text-input" type="text" name="check-out-date" placeholder="Укажите дату" value="1 сентября 2021" required>
+                <input class="input-check-out-date input-date font-inherit text-input" type="text" name="check-out-date" placeholder="Укажите дату" value="1 сентября 2023" required>
               </label>
               <span class="check-error check-out-date-error">На эти даты есть свободные номера. Пока есть.</span>
               <div class="content-modal-add-place-container flex">
@@ -187,7 +187,7 @@
                     <button class="delete-place-adults-button button-place flex" type="button">
                       <span class="visually-hidden">Удалить.</span>
                     </button>
-                    <input class="add-place-adults-input add-place-input text-center font-inherit" type="number" name="place-adults" min="1" step="1" id="place-adults" placeholder="2" required>
+                    <input class="add-place-adults-input add-place-input text-center font-inherit" type="number" name="place-adults" min="1" step="1" id="place-adults" value="2" required>
                     <button class="add-place-adults-button button-place flex" type="button">
                       <span class="visually-hidden">Добавить.</span>
                     </button>
@@ -195,15 +195,19 @@
                 </div>
                 <div class="content-modal-add-place-people-container flex">
                   <label class="add-place-children heading-4" for="place-children">Дети:</label>
-                  <button class="modal-info" type="button"></button>
-                  <div class="popover">
-                    <p class="popover-content base-indent">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                  <div class="popover-container">
+                    <button class="modal-info" type="button">
+                      <span class="visually-hidden">Показать условия для детей</span>
+                    </button>
+                    <div class="popover">
+                      <p class="popover-content base-indent">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                    </div>
                   </div>
                   <div class="place-add-container flex">
                     <button class="delete-place-children-button button-place flex" type="button">
                       <span class="visually-hidden">Удалить.</span>
                     </button>
-                    <input class="add-place-children-input add-place-input text-center font-inherit" type="number" name="place-children" min="0" step="1" id="place-children" placeholder="2">
+                    <input class="add-place-children-input add-place-input text-center font-inherit" type="number" name="place-children" min="0" step="1" id="place-children" value="2">
                     <button class="add-place-children-button button-place flex" type="button">
                       <span class="visually-hidden">Добавить.</span>
                     </button>
